@@ -1,0 +1,8 @@
+{
+  "address": "0.0.0.0:5050",
+  "authSecret": "ffmpeg",
+  // Optional: see "Log" section below (default: no logging)
+  "log": "stdout",
+  // Optional: log original and rewritten args for each command (default: false)
+  "debug": true,
+}

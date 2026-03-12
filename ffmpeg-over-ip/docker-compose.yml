@@ -1,0 +1,14 @@
+services:
+  rffmpeg:
+    image: ghcr.io/kessokunet/ffmpeg-over-ip:latest
+    build: .
+    hostname: ${HOSTNAME:-rffmpeg}
+    container_name: ffmpeg-over-ip
+    privileged: true
+    volumes:
+      - "/dev/dri:/dev/dri"
+      - "./config:/usr/local/etc"
+      - "/var/lib/volumes/jellyfin:/config"
+
+    ports:
+      - "5050:5050"

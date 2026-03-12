@@ -1,0 +1,17 @@
+services:
+  rffmpeg:
+    image: ghcr.io/kessokunet/rffmpeg:latest
+    build: .
+    hostname: ${HOSTNAME:-rffmpeg}
+    container_name: rffmpeg
+    privileged: true
+    volumes:
+      - "./ssh:/root/.ssh"
+      - "./ssh_global:/var/ssh"
+      - "/dev/dri:/dev/dri"
+      - "/var/lib/volumes/media:/media"
+      - "/var/lib/volumes/kessoku/apps/jellyfin/cache/:/cache"
+      - "/var/lib/volumes/jellyfin:/config"
+
+    ports:
+      - "2202:2202"
