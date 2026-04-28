@@ -1,4 +1,4 @@
-FROM ghcr.io/jpvenson/jellyfin.pgsql:10.11.6-1
+FROM ghcr.io/jpvenson/jellyfin.pgsql:10.11.8-1
 
 LABEL org.opencontainers.image.source="https://github.com/KessokuNet/jellyfin"
 LABEL org.opencontainers.image.description="KessokuNet Jellyfin Patches"
